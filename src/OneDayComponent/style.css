@@ -1,0 +1,54 @@
+.day {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 150px;
+  height: 170px;
+  padding: 10px;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.day:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.day .title,
+.day .date,
+.day .task {
+  margin: 0;
+}
+
+.day .title {
+  font-family: "BebasNeue Regular";
+}
+
+.day div {
+  display: flex;
+}
+
+.day .date {
+  font-family: "BebasNeue Bold";
+  margin-left: 15px;
+  font-size: 60px;
+}
+
+.day .month {
+  margin: 0px;
+  font-family: "BebasNeue Book";
+  font-size: 20px;
+}
+
+.day .task {
+  font-family: "BebasNeue Book";
+  font-size: 20px;
+}
+
+.day .line {
+  width: 90%;
+  border: solid 1.5px black;
+}

@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #efefef;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  display: flex;
+  font-family: "BebasNeue Book";
+  font-size: 50px;
+}
+
+.calendar p {
+  margin: 0px;
+  font-family: "BebasNeue Thin";
+  font-size: 30px;
+}
