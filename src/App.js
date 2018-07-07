@@ -3,7 +3,6 @@ import Days from "./DaysComponent/Days";
 import "./style.css";
 import "./fonts.css";
 
-// This is test string
 class App extends React.Component {
   constructor() {
     super();
@@ -85,7 +84,6 @@ class App extends React.Component {
       <div id="app">
         <h1 className="calendar">
           <p>My</p>
-          {"  "}
           Calendar
         </h1>
         <Days days={this.state.days} />

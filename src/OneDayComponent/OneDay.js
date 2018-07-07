@@ -21,6 +21,7 @@ class OneDay extends React.Component {
   render() {
     let { title, date, task, color } = this.props.day;
 
+    // This is bad idea, to write any logic here, move it to class methods
     task === undefined ? (task = "") : (task = this.truncate(task, 20));
 
     return (
