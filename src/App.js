@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 // Components
-import GlobalDatePicker from './components/GlobalDatePicker';
-import TodoDays from './components/TodoDays';
- 
+import GlobalDatePicker from "./components/GlobalDatePicker";
+import TodoDays from "./components/TodoDays";
+
 class App extends React.Component {
-  constructor () {
-    super()
-    
+  constructor() {
+    super();
+
     this.state = {};
   }
 
