@@ -10,8 +10,6 @@ class TodoDays extends Component {
   }
 
   render() {
-    console.log(this.props.months);
-
     return (
       <div>
         <h1>OUR TODO DAYS</h1>
