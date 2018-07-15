@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
+import { connect } from 'react-redux'
+import { pushOpenedPopup } from '../store/actions/MonthAction'
 
 class Popup extends Component {
     constructor(props) {
         super(props);
+
+        this.props.onClose()
     }
 
     _checkPopupVisibility(visibility) {
@@ -14,7 +19,7 @@ class Popup extends Component {
         const { _checkPopupVisibility } = this;
 
         return (
-            <div className="popup" style={_checkPopupVisibility(visibility)}>
+            <div ref="popup" className="popup" style={_checkPopupVisibility(visibility)}>
                 <header className="popup-header">
                     <h3 className="popup-header__title">{title || 'Default title'}</h3>
                     <button className="popup-header__close-btn" onClick={() => this.props.onClose()}>Close</button>
@@ -25,4 +30,14 @@ class Popup extends Component {
     }
 }
 
-export default Popup;
+export default connect(state => {
+    return {
+        popups: state.months.popups
+    }
+}, dispatch => {
+    return {
+        pushOpenedPopup(index) {
+            dispatch(pushOpenedPopup(index))
+        }
+    }
+})(Popup);

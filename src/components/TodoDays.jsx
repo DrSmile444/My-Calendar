@@ -13,9 +13,11 @@ class TodoDays extends Component {
     return (
       <div>
         <h1>OUR TODO DAYS</h1>
-        {this.props.months.map((day, i) => {
-          return <Day day={day} key={i} index={i} />;
-        })}
+        <div className="days-holder">
+          {this.props.months.map((day, i) => {
+            return <Day day={day} key={i} index={i} />;
+          })}
+        </div>
       </div>
     );
   }

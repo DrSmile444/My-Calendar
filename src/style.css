@@ -18,6 +18,13 @@ body {
   padding: 25px;
   width: 480px;
   box-shadow: var(--material-shadow);
+  background-color: #fff;
+}
+
+.day-card {
+  max-width: 280px;
+  border: 1px solid #cecece;
+  box-shadow: var(--material-shadow);
 }
 
 .popup-header {
@@ -29,9 +36,30 @@ body {
   padding-bottom: 10px;
 }
 
+.react-datepicker-wrapper {
+  margin: 15px;
+}
+
+h1 {
+  padding: 0 15px;
+}
+
 .day-component {
   display: flex;
   flex-direction: column;
+}
+
+.days-holder {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.days-holder > .day-card {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin: 15px;
 }
 
 .day-component input {
