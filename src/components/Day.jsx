@@ -10,24 +10,34 @@ class Day extends Component {
             popupVisibility: false
         }
 
-        this.togglePopup = this.togglePopup.bind(this);
+        this._togglePopup = this._togglePopup.bind(this);
+        this._handlePopupClose = this._handlePopupClose.bind(this);
     }
 
-    togglePopup() {
+    _togglePopup() {
         this.setState({
             popupVisibility: !this.state.popupVisibility
         });
     }
 
+    _handlePopupClose() {
+        this.setState({
+            popupVisibility: false
+        })
+    }
+
     render() {
         const { day } = this.props;
         const { popupVisibility } = this.state;
-        const { togglePopup } = this;
+        const { _togglePopup, _handlePopupClose} = this;
 
         return (
             <div>
-                <h3 onClick={togglePopup}>{day}</h3>
-                <Popup visibility={popupVisibility}>
+                <h3 onClick={_togglePopup}>{day.title}</h3>
+                <Popup visibility={popupVisibility} 
+                       onClose={_handlePopupClose}
+                       title={`Day - ${day.title}`}
+                >
                     <DayPopup date={day} />
                 </Popup>
             </div>
