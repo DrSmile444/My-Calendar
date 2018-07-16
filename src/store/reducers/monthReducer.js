@@ -1,15 +1,18 @@
 const initialState = {
-	todoDays: []
-}
+  todoDays: []
+};
 
 const monthReducer = (state = initialState, action) => {
-	switch(action.type) {
-		case 'ADD_DAY':
-			const todoDays = state.todoDays;
-			return {...state, todoDays: [ ...todoDays, action.payload ]}
-		default:
-			return state;
-	}
-}
+  const todoDays = state.todoDays;
+  switch (action.type) {
+    case "ADD_DAY":
+      return { ...state, todoDays: [...todoDays, action.payload] };
+
+    case "SET_DAY":
+
+    default:
+      return state;
+  }
+};
 
 export default monthReducer;
